@@ -1,0 +1,56 @@
+body {
+  align-content: center;
+	margin: 0 auto;
+  width: 1000px;
+}
+
+header {
+  padding-top: 2%;
+}
+
+.first-image {
+  padding-top: 2%;
+}
+
+.second-image {
+  padding-bottom: 2%;
+}
+
+.post-1, .post-2  {
+  width: 1000px;
+}
+
+.press img {
+  border: 4px lightgrey solid;
+}
+
+/* .press img {
+border: double 1px white;
+outline: solid 5px lightgrey;
+} */
+
+h3 {
+  color: grey;
+  font-family: 'EB Garamond', serif,
+}
+
+p {
+  line-height: 24px;
+  font-size: 16px;
+  color: grey;
+  font-family: 'Garamond', serif;
+}
+
+a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.date {
+  color: lightblue;
+}
+
+footer p {
+  font-size: 14px;
+  font-family: 'Garamond', serif;
+}
