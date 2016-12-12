@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="/style.css">
-  <title>Movies I</title>
+<form action='/' method='get'>
+  <input name='movie' type='text' placeholder='enter movie title' />
+  <button>Search Movie</button>
+</form>
 
-</head>
-<body>
-  <h1>SHOW ME THE MOVIES!!</h1>
-    <form action='/' method='get'>
-      <input name='movie' type='text' placeholder='insert movie title' />
-      <button>Get Movie</button>
-    </form>
-
-   <p> <%= @result[@movie_title] %> </p>
-
-</body>
-</html>
+<div class="content">
+  <p>Title: <%= @result["Title"] %> </p>
+  <p>Genre: <%= @result["Genre"] %> </p>
+  <p>Year: <%= @result["Year"] %> </p>
+  <p>Rating: <%= @result["imdbRating"] %> </p>
+  <p>Actors: <%= @result["Actors"] %> </p>
+  <p>Plot: <%= @result["Plot"] %> </p>
+</div>
+<div class="aside">
+  <img src= <%= @result["Poster"] %>>
+</div>
