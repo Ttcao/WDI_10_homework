@@ -4,12 +4,9 @@
 </form>
 
 <div class="content">
-  <p>Title: <%= @result["Title"] %> </p>
-  <p>Genre: <%= @result["Genre"] %> </p>
-  <p>Year: <%= @result["Year"] %> </p>
-  <p>Rating: <%= @result["imdbRating"] %> </p>
-  <p>Actors: <%= @result["Actors"] %> </p>
-  <p>Plot: <%= @result["Plot"] %> </p>
+
+  <p>Title: <%= @result["Search"][0] %> </p>
+
 </div>
 <div class="aside">
   <img src= <%= @result["Poster"] %>>
