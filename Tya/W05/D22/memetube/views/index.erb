@@ -1,0 +1,28 @@
+<h2>Add your video</h2>
+
+<div class="form"
+<form action="/" method="post">
+
+  <label>Title</label>
+  <input name="title" type="text" />
+
+  <label>Description</label>
+  <textarea name="description"></textarea>
+
+  <label>URL</label>
+  <input name="url" type="text" />
+
+  <label>Genre</label>
+  <input name="genre" type="text" />
+
+  <button>Add to list</button>
+</form>
+</div>
+
+<h2>List</h2>
+
+<% @entries.each do |entry| %>
+<p> <%= entry["title"] %> - <%= entry["description"] %> </p>
+<p> <a href="/edit/<%=entry['id']%>">Edit video</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= entry["url"].split('=')[1]%>" frameborder="0" allowfullscreen></iframe>
+<% end %>

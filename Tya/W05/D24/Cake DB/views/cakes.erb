@@ -1,0 +1,16 @@
+<h1>Cakes Collection</h1>
+
+<form action="/cakes" method="post">
+<input name="name" placeholder="name of cake"/>
+<input name="difficulty" placeholder="difficulty level"/>
+<input name="serves" placeholder="how many serves"/>
+<textarea name="description" placeholder="enter a description"></textarea>
+<input name="image" placeholder="insert URL for image"/>
+<button type="Submit">New cake!</button>
+</form>
+
+<ul>
+<% @cakes.each do |cake| %>
+<li><a href='/cake/<%= cake.id%>'><%= cake.name %></a></li>
+<% end %>
+</ul>

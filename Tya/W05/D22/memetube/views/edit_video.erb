@@ -1,0 +1,26 @@
+<h1>Edit video: <%=@entry['title']%></h1>
+
+<div class="form">
+<form action="/edit/<%=@entry['id']%>" method="post">
+
+  <label>Title</label>
+  <input name="title" type="text" value="<%=@entry['title']%>"/>
+
+  <label>Description</label>
+  <textarea name="description" placeholder="Edit description"><%= @entry['description']%></textarea>
+
+  <label>URL</label>
+  <input name="url" type="text" value="<%=@entry['url']%>" />
+
+  <label>Genre</label>
+  <input name="genre" type="text" value="<%=@entry['genre']%>"/>
+
+  <button>Edit!</button>
+</form>
+</div>
+
+<form action="/delete/<%=@entry['id']%>" method="post">
+<button>Delete video!</button>
+</form>
+
+<p><a href="/">Back to Memetube list</a></p>

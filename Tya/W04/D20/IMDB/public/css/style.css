@@ -5,6 +5,12 @@ h1 {
 
 }
 
+h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 30pt;
+  margin-left: 60px;
+}
+
 body {
   font-family: 'Oxygen', sans-serif;
 }
