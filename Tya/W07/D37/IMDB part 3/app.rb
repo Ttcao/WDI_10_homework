@@ -8,12 +8,8 @@ require 'pg'
 
 get '/' do
   @movie_title = params[:movie]
-  if @movie_title
     @result = HTTParty.get("http://omdbapi.com/?s=#{@movie_title}")
     erb :index
-  else
-    erb :index
-  end
 end
 
 get '/movie/:movie' do

@@ -1,0 +1,24 @@
+<h1>BaceFook Wall</h1>
+
+<label for="post">Post: </label>
+<textarea id="post-text" type="text" name="post[text]" placeholder="Enter post"></textarea>
+<button id="add-post">Submit Post</button>
+
+<ul id="post-list">
+  <% @posts.each do |post| %>
+    <li data-post-id='<%= post.id %>'><%= post.text %>
+
+      <ul id="comment-list">
+      <% if post.comments.any? %>
+        <% post.comments.each do |comment| %>
+        <li><%= comment.text %></li>
+        <% end %>
+      <% end %>
+      </ul>
+
+    <label for="comments">Comments: </label>
+    <textarea id="comment-text" type="text" name="comment[text]" placeholder="Enter comment"></textarea>
+    <button class="add-comment">Submit Comment</button>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,16 @@
+<h2>Movie</h2>
+
+<form action='/' method='get'>
+<input id='movie' name='movie' type='text' placeholder='enter movie title'/>
+<button id="search-movie">Search Movie</button>
+</form>
+
+<div class="content">
+  <ul id="movie-list">
+  <% if @result["Response"] == "True" %>
+    <% @result["Search"].each do |movie| %>
+    <h3><%= movie["Title"]%></h3>
+    <% end %>
+  <% end %>
+  <ul>
+</div>
