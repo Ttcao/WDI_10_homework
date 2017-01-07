@@ -8,11 +8,12 @@ $(document).ready(function(){
     }
 
     $.ajax(settings).done(function(response) {
-      // console.log(response)
-      // for(var i=)
-      var $liElement = $('<li>');
-      $liElement.append("<p>" + response.text + "</p>")
-      $('#movie-list').append($liElement);
+        response["Search"].forEach(function(movie){
+          var $liElement = $('<li>');
+          $liElement.append("<p>" + movie["Title"] + "</p>")
+          $('#movie-list').append($liElement);
+        })
+
     });
 
     return false;
