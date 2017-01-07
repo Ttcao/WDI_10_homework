@@ -8,14 +8,16 @@ $(document).ready(function(){
     }
 
     $.ajax(settings).done(function(response) {
+        $('#movie-list').empty();
         response["Search"].forEach(function(movie){
           var $liElement = $('<li>');
-          $liElement.append("<p>" + movie["Title"] + "</p>")
+          $liElement.append("<a href='http://www.imdb.com/title/" + movie['imdbID'] + "'>" + movie["Title"] + "</a>")
           $('#movie-list').append($liElement);
         })
 
     });
 
+    // prevent HTML form from being submitted
     return false;
   };
 
