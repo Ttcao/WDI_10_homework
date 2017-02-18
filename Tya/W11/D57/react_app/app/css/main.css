@@ -1,0 +1,22 @@
+body {
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+}
+
+h1 {
+color: #4E5862;
+}
+
+.li-class {
+  line-height: 20px;
+  color: #0b205b;
+}
+
+p {
+  color: #0b205b;
+}
+
+div ul {
+  background-color: #dae3fb;
+  padding-top: 5px;
+}
